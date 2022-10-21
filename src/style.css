@@ -1,0 +1,754 @@
+body {
+    transition: 0.8s;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(245, 240, 240);
+    font-family: 'Poppins', sans-serif;
+    color: rgb(57, 57, 57);
+}
+
+.hero {
+    transition: 0.8s;
+    background-color: rgb(245, 240, 240);
+    font-size: 40px;
+}
+
+.dark .hero {
+    transition: 0.8s;
+    background-color: rgb(57, 57, 57);
+}
+
+.dark .hamburger {
+    color: white;
+}
+
+
+h1 {
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+#h2-about {
+    font-size: 36px;
+    color: rgb(57, 57, 57);
+}
+
+.dark #h2-about {
+    font-size: 36px;
+    color: aqua;
+}
+
+p {
+    margin: 0px;
+    font-size: 20px;
+}
+
+a {
+    color: rgb(179, 77, 40);
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.dark a {
+    color: rgb(255, 127, 80);
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 30px 30px 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* margin: 0 200px 0 200px; */
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    width: 500px;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+li {
+    /*width: 200px; */
+    text-decoration: none;
+}
+
+/* day-night mode switch button start */
+
+.switch {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(38, 38, 38);
+    position: relative;
+    transition: 0.8s;
+    margin-left: 50px;
+}
+
+.flicker {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    ;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    box-shadow:
+        inset 4px 4px 4px rgb(255, 255, 255),
+        inset -4px -4px 4px rgb(195 193 198 / 90%);
+    /* -14px -14px 10px also looks good */
+    transition: 0.4s;
+}
+
+
+.dark {
+    background-color: rgb(57, 57, 57);
+    transition: 0.8s;
+}
+
+.moon {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+    position: absolute;
+    top: 5px;
+    left: 45px;
+}
+
+.dark .flicker {
+    transform: translateX(40px);
+}
+
+.dark>* {
+    color: rgb(255, 255, 255);
+}
+
+/* day-night mode switch button end */
+
+/* about-intro section start */
+
+.main {
+    /* margin: 0 60px 0 150px; */
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.main-text {
+    padding: 30px;
+    margin-bottom: 100px;
+    transition: 0.8s;
+}
+
+.sub-section {
+    background-color: rgb(229, 226, 226);
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    transition: 0.8s;
+}
+
+.dark .sub-section {
+    background-color: rgb(38, 38, 38);
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    transition: 0.8s;
+}
+
+/* about-intro section end */
+
+/* start projects section */
+
+.sub-section-alt {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#projects {
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+.project-card {
+    width: 300px;
+    height: 500px;
+    box-shadow: 5px 5px 20px rgba(133, 124, 84, 0.705);
+    margin: 10px;
+    transition: 0.2s;
+}
+
+.project-card:hover {
+    font-size: 30px;
+    width: 400px;
+    height: 600px;
+    transition: 0.2s;
+}
+
+.project-image {
+    margin-top: 25px;
+    width: 250px;
+    border-radius: 125px;
+}
+
+.sub-section-alt {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+}
+
+/* end projects section */
+
+/* start language cubes section */
+
+.hero-image {
+    position: relative;
+    width: 50%;
+    height: 350px;
+    display: block;
+    margin-left: 200px;
+    margin-bottom: 100px;
+}
+
+.cube {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    height: 80px;
+    transform: rotate(-25deg) skew(25deg);
+}
+
+.cube::before {
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 100%;
+    transform: skewY(-45deg);
+    left: -20px;
+    bottom: -10px;
+}
+
+.cube::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 21px;
+    transform: skewX(-45deg);
+    left: -10px;
+    bottom: -20px;
+}
+
+.direct-img-link {
+    font-size: 48px;
+    color: rgb(240, 246, 248)
+}
+
+.dark .direct-img-link {
+    color: rgba(240, 246, 248, 0)
+}
+
+/* start html logo effects */
+
+#html-img {
+    left: 82px;
+    bottom: 80px;
+    background-image: url(images/html-square.png);
+    background-size: cover;
+    background-color: rgb(175, 119, 227);
+    box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
+    /* shadow at -60px 60px also looks good*/
+    transition: 0.8s;
+}
+
+#html-img:hover {
+    background-color: rgba(98, 8, 182, 0.705);
+}
+
+.dark #html-img:hover {
+    background-color: rgba(98, 8, 182, 0.705);
+}
+
+.dark #html-img {
+    left: 82px;
+    bottom: 80px;
+    background-image: url(images/html-square.png);
+    background-size: cover;
+    background-color: rgb(175, 119, 227);
+    box-shadow: -80px 80px 20px rgba(240, 234, 234, 0.219);
+    transition: 0.8s;
+}
+
+#html-img::before {
+    background-color: rgb(189, 154, 221);
+    transition: 0.8s;
+}
+
+#html-img:hover:before {
+    background-color: rgb(159, 98, 216);
+    transition: 0.8s;
+}
+
+#html-img::after {
+    background-color: rgb(189, 154, 221);
+    transition: 0.8s;
+}
+
+#html-img:hover:after {
+    background-color: rgb(166, 112, 218);
+    transition: 0.8s;
+}
+
+/* end html logo effects */
+
+/* start css logo effects */
+
+#css-img {
+    left: 100px;
+    bottom: 220px;
+    background-image: url(images/css-square.png);
+    background-size: cover;
+    background-color: rgb(227, 119, 191);
+    box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
+    transition: 0.8s;
+}
+
+#css-img:hover {
+    background-color: rgb(226, 33, 162);
+}
+
+.dark #css-img:hover {
+    background-color: rgb(226, 33, 162);
+}
+
+.dark #css-img {
+    left: 100px;
+    bottom: 220px;
+    background-image: url(images/css-square.png);
+    background-size: cover;
+    background-color: rgb(227, 119, 191);
+    box-shadow: -80px 80px 20px rgba(240, 234, 234, 0.219);
+    transition: 0.8s;
+}
+
+#css-img::before {
+    background-color: rgb(221, 154, 207);
+    transition: 0.8s;
+}
+
+#css-img:hover:before {
+    background-color: rgb(218, 110, 194);
+    transition: 0.8s;
+}
+
+#css-img::after {
+    background-color: rgb(222, 178, 243);
+    transition: 0.8s;
+}
+
+#css-img:hover:after {
+    background-color: rgba(208, 133, 238, 0.877);
+    transition: 0.8s;
+}
+
+/* end css logo effects */
+
+/*start javascript logo effects*/
+
+#javascript-img {
+    left: 200px;
+    bottom: 132px;
+    background-image: url(images/javascript-square.png);
+    background-size: cover;
+    background-color: rgb(119, 227, 186);
+    box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
+    /* shadow at -60px 60px also looks good*/
+    transition: 0.8s;
+}
+
+#javascript-img:hover {
+    background-color: rgba(35, 226, 146, 0.938);
+}
+
+.dark #javascript-img:hover {
+    background-color: rgb(40, 231, 158);
+}
+
+.dark #javascript-img {
+    left: 200px;
+    bottom: 132px;
+    background-image: url(images/javascript-square.png);
+    background-size: cover;
+    background-color: rgb(119, 227, 186);
+    box-shadow: -80px 80px 20px rgba(240, 234, 234, 0.219);
+    transition: 0.8s;
+}
+
+#javascript-img::before {
+    background-color: rgb(154, 221, 202);
+    transition: 0.8s;
+}
+
+#javascript-img:hover:before {
+    background-color: rgb(106, 226, 192);
+    transition: 0.8s;
+}
+
+#javascript-img::after {
+    background-color: rgb(188, 221, 212);
+    transition: 0.8s;
+}
+
+#javascript-img:hover:after {
+    background-color: rgb(131, 238, 188);
+    transition: 0.8s;
+}
+
+/* end javascript logo effects */
+
+/* start react logo effects */
+
+#react-img {
+    left: 306px;
+    bottom: 40px;
+    background-image: url(images/react-square.png);
+    background-size: cover;
+    background-color: rgb(119, 193, 227);
+    box-shadow: -90px 90px 20px rgb(50 50 50/ 15%);
+    /* shadow at -60px 60px also looks good*/
+    transition: 0.8s;
+}
+
+#react-img:hover {
+    background-color: rgb(23, 162, 226);
+}
+
+.dark #react-img:hover {
+    background-color: rgb(23, 162, 226);
+}
+
+.dark #react-img {
+    left: 306px;
+    bottom: 40px;
+    background-image: url(images/react-square.png);
+    background-size: cover;
+    background-color: rgb(119, 193, 227);
+    box-shadow: -80px 80px 20px rgba(240, 234, 234, 0.219);
+    transition: 0.8s;
+}
+
+#react-img::before {
+    background-color: rgb(154, 205, 221);
+    transition: 0.8s;
+}
+
+#react-img:hover:before {
+    background-color: rgb(77, 176, 206);
+    transition: 0.8s;
+}
+
+#react-img::after {
+    background-color: rgb(166, 213, 245);
+    transition: 0.8s;
+}
+
+#react-img:hover:after {
+    background-color: rgb(107, 186, 238);
+    transition: 0.8s;
+}
+
+/* end react logo effects */
+
+/* start api logo effects */
+
+#api-img {
+    left: 310px;
+    bottom: 190px;
+    background-image: url(images/apiLogo.png);
+    background-size: cover;
+    background-color: rgb(169, 219, 241);
+    box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
+    /* shadow at -60px 60px also looks good*/
+    transition: 0.8s;
+}
+
+.dark #api-img {
+    left: 310px;
+    bottom: 190px;
+    background-image: url(images/apiLogo.png);
+    background-size: cover;
+    background-color: rgb(169, 219, 241);
+    box-shadow: -80px 80px 20px rgba(240, 234, 234, 0.219);
+    transition: 0.8s;
+}
+
+#api-img:hover {
+    background-color: rgb(49, 173, 226);
+    transition: 0.8s;
+}
+
+#api-img::before {
+    background-color: rgb(127, 206, 243);
+    transition: 0.8s;
+}
+
+#api-img:hover:before {
+    background-color: rgb(71, 188, 243);
+    transition: 0.8s;
+}
+
+#api-img::after {
+    background-color: rgb(135, 238, 252);
+    transition: 0.8s;
+}
+
+#api-img:hover:after {
+    background-color: rgb(84, 226, 245);
+    transition: 0.8s;
+}
+
+/* end api logo effects */
+
+/* end language-cubes section */
+
+/* start footer contact section */
+
+footer {
+    background-color: rgb(255, 255, 255);
+    color: rgb(87, 84, 84);
+    font-weight: 300;
+    text-align: center;
+    padding: 40px;
+    outline: 0;
+    text-decoration: none;
+
+}
+
+.dark footer {
+    background-color: rgb(38, 38, 38);
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+select,
+textarea {    
+    color: rgb(128, 128, 128);
+    width: 600px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding: 12px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 0;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 0;
+    border-bottom: 1px solid #f5f5f5;
+    resize: vertical
+        /* Allow user to vertically resize textarea (not horizontally) */
+}
+
+.dark input[type=text],
+select,
+textarea {
+    color: rgb(128, 128, 128);
+    background-color: rgb(38, 38, 38);
+}
+
+#subject {
+    color: rgb(128, 128, 128);
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    width: 600px;
+}
+
+.dark #subject {
+    color: rgb(128, 128, 128);
+    background-color: rgb(38, 38, 38);
+}
+
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: rgb(255, 127, 80);
+    color: rgb(238, 238, 238);
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: rgb(252, 106, 53);
+}
+
+/* Add a background color and some padding around the form */
+.form-container {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    align-items: center;
+}
+
+/* end projects section */
+
+/* start back-to-top button section */
+
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: rgb(255, 127, 80);
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: rgb(252, 106, 53);
+    /* Add a dark-grey background on hover */
+}
+
+/* end back-to-top button section */
+
+/* start mobile responsive functions */
+
+@media only screen and (min-width: 970px) {
+    .main-text {
+        width: 50%;
+    }
+
+    .square {
+        width: 48%;
+        margin: 1%;
+        height: 600px;
+    }
+
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger:focus {
+    outline: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero-image {
+        display: none;
+    }
+
+    .sub-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .project-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .hamburger {
+        display: block;
+        border: 0;
+        background-color: transparent;
+        color: rgb(43, 44, 56);
+        font-size: 30px;
+        margin: 20px;
+        align-self: flex-end;
+    }
+
+    .main {
+        margin: 0px;
+    }
+
+    ul {
+        display: none;
+        background-color: rgb(43, 44, 56);
+        margin: 0px;
+    }
+
+    ul.show {
+        display: block;
+    }
+
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        transition: 0.6s;
+        margin: 20px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    input[type=text],
+    select,
+    textarea {    
+    width: 100% !important;
+    }
+
+}
+
+/* end mobile responsive functions */

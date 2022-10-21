@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+    <title>Day and Night Potfolio</title>
+    <script src="https://kit.fontawesome.com/babf393ccc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section class="hero">
+        <nav>
+            <header>
+                <div class="switch">
+                    <div class="flicker"></div>
+                    <div class="moon"></div>
+                </div>
+            </header>
+            <ul id="nav-list">
+                <li><a href="#about-me">About me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#footer-contact">Contact me</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </section>
+
+    <section class="main">
+        <div class="main-text">
+            <h1>Shaun Young</h1>
+            <h2 id="h2-about">Software Engineer. Game Developer. Digital Artist.</h2>
+            <br />
+            <p></p>
+            <br />
+            <a href="#footer-contact">Contact me ></a>
+        </div>
+
+        <div class="hero-image">
+            <div class="cube" id="react-img"></div>
+            <div class="cube" id="javascript-img"></div>
+            <div class="cube" id="html-img"><a class="direct-img-link" href="https://github.com/sey-shaun"></a>
+            </div>
+            <div class="cube" id="css-img"><a class="direct-img-link" href="https://github.com/sey-shaun">Proj</a></div>
+            <div class="cube" id="api-img"><a class="direct-img-link" href="https://github.com/sey-shaun">Proj</a></div>
+        </div>
+    </section>
+
+    <section class="sub-section" id="about-me">
+        <div class="information">
+            <h2>About me</h2>
+            <p>Hi, I'm Shaun. With years of experience as a full stack web developer, I'm just a message away from helping you 
+                make your next big idea into a reality. If you're ready to see your project
+                alive and online, trust an expert with years of experience in the industry of complete web service
+                delivery.
+                <a class="contact-2" href="#footer-contact">Contact me</a> to get started!
+            </p>
+        </div>
+    </section>
+
+    <section class="sub-section-alt">
+        <h2 id="projects">Project showcase</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <img class="project-image" src="src/images/midCentCoffeAdAI.png" alt="Project One Image" />
+                <h3>E-Commerce Store</h3>
+                <p class="subtext">A dynamic online store with secure payment processing</p>
+                <hr />
+                <p class="subtext"><a class="project-link" href="https://github.com/sey-shaun">View here</a></p>
+            </div>
+            <div class="project-card">
+                <img class="project-image" src="src/images/landingPage1.png" alt="Project Two Image" />
+                <h3>Company Landing Page</h3>
+                <p class="subtext">A visually immersive first impression</p>
+                <hr />
+                <p class="subtext"><a class="project-link" href="https://github.com/sey-shaun">View here</a></p>
+            </div>
+            <div class="project-card">
+                <img class="project-image" src="src/images/sunriseOnNeptuneAI.png" alt="Project Three Image" />
+                <h3>Artist Portfolio</h3>
+                <p class="subtext">An aesthetically appealing look at this artist's creations</p>
+                <hr />
+                <p class="subtext"><a class="project-link" href="https://github.com/sey-shaun">View here</a></p>
+            </div>
+            <div class="project-card">
+                <img class="project-image" src="src/images/npmLogo.svg" alt="Project Four Image" />
+                <h3>JS Game</h3>
+                <p class="subtext">A fun, interactive game built fully in JavaScript</p>
+                <hr />
+                <p class="subtext"><a class="project-link" href="https://github.com/sey-shaun">View here</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer-contact">
+        <h2>Let's get in touch</h2>
+        <!-- <p>email@email.com</p>  -->
+        <div class="form-container">
+            <!-- <h2>Contact me</h2> -->
+            <form action="action_page.php">
+
+                <label for="fname"></label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name">
+
+                <label for="lname"></label>
+                <input type="text" id="lname" name="subject" placeholder="Subject">
+
+                <label for="subject"></label>
+                <textarea id="subject" name="subject" placeholder="Please describe your project in brief detail"
+                    style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+    </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script src="src/app.js"></script>
+</body>
+
+</html>
+
+<!-- <a class="direct-img-link" href="https://github.com/sey-shaun">Proj</a> -->
