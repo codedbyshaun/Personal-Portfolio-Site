@@ -2,6 +2,7 @@ const switchElement = document.querySelector('.switch') // Day-Night mode toggle
 
 const hamburgerButton = document.getElementById('hamburger') // Hamburger menu toggle
 const navList = document.getElementById('nav-list')
+const icon = document.querySelector('.hamburger i')
 
 switchElement.addEventListener('click', () => {
     document.body.classList.toggle('dark')
@@ -12,7 +13,13 @@ function toggleButton() {
 }
 
 // Hamburger menu toggle
-hamburgerButton.addEventListener('click', toggleButton) // Hamburger menu toggle
+hamburgerButton.addEventListener('click', () => {
+  navList.classList.toggle('show');
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-times');
+  switchElement.classList.toggle('switch-hide')
+})
+
 
 // Start back to top button section
 mybutton = document.getElementById("myBtn");
@@ -31,18 +38,8 @@ function topFunction() { // When user clicks button, scroll to top
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
-// End back to top button section
 
 
-// const man = document.querySelector('.face')
 
-// let count = 0
 
-// function moveMan() {
-//     count += 50
-//     console.log(count)
-//     man.style.left = count + 'px'     
-// }
-
-// man.addEventListener('click', moveMan)
 
