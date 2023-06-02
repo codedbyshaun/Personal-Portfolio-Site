@@ -38,11 +38,8 @@ function topFunction() { // When user clicks button, scroll to top
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
-<<<<<<< HEAD
 
 
 
 
 
-=======
->>>>>>> b22fb92ffae026a8258a11a845055502478e933a
